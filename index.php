@@ -8,8 +8,25 @@
 
 <body>
 
+	<div id="content">
+	
+		<div id="profile_info">
+			<p id="name">Nguyễn Thành Dũng</p>
+			<p id="info">Game Programmer<br/>27 years old<br/>Sai Gon, Viet Nam</p>
+		</div>
+		
+		<div id="avatar">
+			<p>Avatar</p>
+		</div>
+		
+		<img id="line" alt="Line" src="images/line.png">
+		
+		<div id="nagivation">
+			<p>Navigation</p>
+		</div>
+	
+	</div>
 
-
-</<body>
+</body>
 
 </html>

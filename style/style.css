@@ -3,4 +3,42 @@
 body
 {
 	background: #000 url("../images/background.png") repeat-x;
+	color: #ccc;
+}
+
+p
+{
+	font-family: Tahoma, Arial, Sans-serif;
+}
+
+#content
+{
+	margin-top: 100px;
+}
+
+#profile_info
+{
+	float: left;
+	text-align: right;
+}
+
+#profile_info #name
+{
+	font-size: 14pt;
+}
+
+#profile_info #info
+{
+	font-size: 12pt;
+	
+}
+
+#avatar
+{
+	float: left;
+}
+
+#line
+{
+	float: left;
 }
