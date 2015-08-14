@@ -19,8 +19,39 @@
 		
 		<img id="line" alt="Line" src="images/line.png">
 		
-		<div id="nagivation">
-			<p>Navigation</p>
+		<div id="nagivation_zone">
+			<div class="navigator">
+				<a href="#">
+					<img class="button" alt="Programming" src="images/programming.png">
+				</a>
+				<div class="name">
+					<p>Programming</p>
+				</div>
+			</div>
+			<div class="navigator">
+				<a href="#">
+					<img class="button" alt="Guitar" src="images/guitar.png">
+				</a>
+				<div class="name">
+					<p>Guitar</p>
+				</div>
+			</div>
+			<div class="navigator">
+				<a href="#">
+					<img class="button" alt="Guitar" src="images/photography.png">
+				</a>
+				<div class="name">
+					<p>Photography</p>
+				</div>
+			</div>
+			<div class="navigator">
+				<a href="#">
+					<img class="button" alt="Guitar" src="images/photography.png">
+				</a>
+				<div class="name">
+					<p>Photography</p>
+				</div>
+			</div>
 		</div>
 	
 	</div>
