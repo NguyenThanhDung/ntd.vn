@@ -15,9 +15,7 @@
 			<p id="info">Game Programmer<br/>27 years old<br/>Sai Gon, Viet Nam</p>
 		</div>
 		
-		<div id="avatar">
-			<p>Avatar</p>
-		</div>
+		<img id="avatar" alt="Avatar" src="images/avatar.png">
 		
 		<img id="line" alt="Line" src="images/line.png">
 		
