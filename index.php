@@ -35,7 +35,7 @@
 		
 			<div id="navigation_zone">
 				<div class="navigator">
-					<a class="link" href="#">
+					<a class="link" href="constructing_page.php">
 						<div id="programming"></div>
 					</a>
 					<div class="name">
@@ -46,7 +46,7 @@
 					</div>
 				</div>
 				<div class="navigator">
-					<a class="link" href="#">
+					<a class="link" href="constructing_page.php">
 						<div id="guitar"></div>
 					</a>
 					<div class="name">
@@ -57,7 +57,7 @@
 					</div>
 				</div>
 				<div class="navigator">
-					<a class="link" href="#">
+					<a class="link" href="constructing_page.php">
 						<div id="photography"></div>
 					</a>
 					<div class="name">
@@ -68,7 +68,7 @@
 					</div>
 				</div>
 				<div class="navigator">
-					<a class="link" href="#">
+					<a class="link" href="constructing_page.php">
 						<div id="xclams"></div>
 					</a>
 					<div class="name">
