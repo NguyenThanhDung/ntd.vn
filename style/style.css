@@ -9,6 +9,7 @@ body
 p
 {
 	font-family: Tahoma, Arial, Sans-serif;
+	font-size: 11pt;
 }
 
 #logo
@@ -16,6 +17,15 @@ p
 	position: absolute;
 	top: 20px;
 	left: 20px;
+}
+
+#quotation
+{
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	text-align: right;
+	font-style: italic;
 }
 
 #content
@@ -37,11 +47,6 @@ p
 {
 	font-weight: bold;
 	font-size: 12pt;
-}
-
-#info
-{
-	font-size: 11pt;
 }
 
 #avatar
@@ -126,7 +131,6 @@ p
 	margin: 5px;
 	text-align: center;
 	font-weight: bold;
-	font-size: 11pt;
 }
 
 .highlight

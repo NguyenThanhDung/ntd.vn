@@ -13,6 +13,10 @@
 	<div id="logo">
 		<img alt="Logo" src="images/logo.png">
 	</div>
+	
+	<div id="quotation">
+		<p>We can not change the past, but we can change the future<br/>(Unknown)</p>
+	</div>
 
 	<div id="content">
 	
