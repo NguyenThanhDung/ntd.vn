@@ -14,7 +14,7 @@
 	</div>
 
 	<div style="margin: 250px auto 0px;	width: 600px;">
-		<div style="margin: auto; width:400px; height: 400px;"><img src="images/bathing.png"></div>
+		<div style="margin: auto; width:300px; height: 300px;"><img src="images/bathing.png"></div>
 		<p style="font-family: Tahoma, Arial, Sans-serif; color: #ccc; font-size: 14pt; text-align: center;">Oh! This page is under construction. Please come back later...</p>
 	</div>
 
