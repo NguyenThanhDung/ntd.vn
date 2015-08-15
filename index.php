@@ -12,48 +12,64 @@
 
 	<div id="content">
 	
-		<div id="profile_info">
-			<p id="name">Nguyễn Thành Dũng</p>
-			<p id="info">Game Programmer<br/>27 years old<br/>Sai Gon, Viet Nam</p>
-		</div>
+			<div id="profile">
+				<p id="name">Nguyễn Thành Dũng</p>
+				<p id="info">Game Programmer<br/>27 years old<br/>Sai Gon, Viet Nam</p>
+			</div>
 		
-		<img id="avatar" alt="Avatar" src="images/avatar.png">
+			<div id="avatar">
+				<img alt="Avatar" src="images/avatar.png">
+			</div>
 		
-		<img id="line" alt="Line" src="images/line.png">
+			<div id="line">
+				<img alt="Line" src="images/line.png">
+			</div>
 		
-		<div id="nagivation_zone">
-			<div class="navigator">
-				<a href="#">
-					<img class="button" alt="Programming" src="images/programming.png">
-				</a>
-				<div class="name">
-					<p>Programming</p>
+			<div id="navigation_zone">
+				<div class="navigator">
+					<a class="link" href="#">
+						<div id="programming"></div>
+					</a>
+					<div class="name">
+						<p>Programming</p>
+					</div>
+					<div class="highlight">
+						<img alt="Highlight" src="images/highlight.png">
+					</div>
 				</div>
-			</div>
-			<div class="navigator">
-				<a href="#">
-					<img class="button" alt="Guitar" src="images/guitar.png">
-				</a>
-				<div class="name">
-					<p>Guitar</p>
+				<div class="navigator">
+					<a class="link" href="#">
+						<div id="guitar"></div>
+					</a>
+					<div class="name">
+						<p>Guitar</p>
+					</div>
+					<div class="highlight">
+						<img alt="Highlight" src="images/highlight.png">
+					</div>
 				</div>
-			</div>
-			<div class="navigator">
-				<a href="#">
-					<img class="button" alt="Guitar" src="images/photography.png">
-				</a>
-				<div class="name">
-					<p>Photography</p>
+				<div class="navigator">
+					<a class="link" href="#">
+						<div id="photography"></div>
+					</a>
+					<div class="name">
+						<p>Photography</p>
+					</div>
+					<div class="highlight">
+						<img alt="Highlight" src="images/highlight.png">
+					</div>
 				</div>
-			</div>
-			<div class="navigator">
-				<a href="#">
-					<img class="button" alt="Guitar" src="images/photography.png">
-				</a>
-				<div class="name">
-					<p>Photography</p>
+				<div class="navigator">
+					<a class="link" href="#">
+						<div id="xclams"></div>
+					</a>
+					<div class="name">
+						<p>Xclams</p>
+					</div>
+					<div class="highlight">
+						<img alt="Highlight" src="images/highlight.png">
+					</div>
 				</div>
-			</div>
 		</div>
 	
 	</div>

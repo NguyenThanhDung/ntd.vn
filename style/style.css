@@ -15,46 +15,114 @@ p
 {
 	margin: 250px auto 0px;
 	width: 1000px;
-	display: block;
+	display:flex;
+	justify-content:center;
+	align-items:center;
 }
 
-#profile_info
+#profile
 {
-	display: inline-block;
+	margin: 0px 10px 0px;
 	text-align: right;
 }
 
-#profile_info #name
+#name
 {
-	font-size: 14pt;
+	font-weight: bold;
+	font-size: 12pt;
 }
 
-#profile_info #info
+#info
 {
-	font-size: 12pt;
+	font-size: 11pt;
 }
 
 #avatar
 {
-	display: inline-block;
+	margin: 0px 10px 0px;
 }
 
 #line
 {
-	display: inline-block;
+	margin: 0px 10px 0px;
+}	
+
+#navigation_zone
+{
+	margin: 0px;// 10px 0px;
+	width: 540px;
+	display:flex;
+	justify-content:top;
+	align-items:center;
 }
 
-#nagivation_zone
+.navigator
 {
-	display: inline-block;
+	margin: 40px 10px 0px;
 }
 
-div.navigator
+.link
 {
-	float: left;
+	display: block;
+	width: 120px;
+	height: 126px;
 }
 
-div.name p
+.link div
 {
+	width: 100%;
+	height: 100%;
+}
+
+#programming
+{
+	background: url("../images/programming.png");
+}
+
+#programming:HOVER
+{
+	background: url("../images/programming_hover.png");
+}
+
+#guitar
+{
+	background: url("../images/guitar.png");
+}
+
+#guitar:HOVER
+{
+	background: url("../images/guitar_hover.png");
+}
+
+#photography
+{
+	background: url("../images/photography.png");
+}
+
+#photography:HOVER
+{
+	background: url("../images/photography_hover.png");
+}
+
+#xclams
+{
+	background: url("../images/xclams.png");
+}
+
+#xclams:HOVER
+{
+	background: url("../images/xclams_hover.png");
+}
+
+.name p
+{
+	margin: 5px;
 	text-align: center;
+	font-weight: bold;
+	font-size: 11pt;
+}
+
+.highlight
+{
+	visibility: hidden;
 }
