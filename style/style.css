@@ -13,13 +13,14 @@ p
 
 #content
 {
-	margin-top: 100px;
+	margin: 250px auto 0px;
+	width: 1000px;
 	display: block;
 }
 
 #profile_info
 {
-	float: left;
+	display: inline-block;
 	text-align: right;
 }
 
@@ -35,18 +36,17 @@ p
 
 #avatar
 {
-	float: left;
+	display: inline-block;
 }
 
 #line
 {
-	float: left;
+	display: inline-block;
 }
 
 #nagivation_zone
 {
-	display: block;
-	margin: 43px 10px 10px;
+	display: inline-block;
 }
 
 div.navigator
