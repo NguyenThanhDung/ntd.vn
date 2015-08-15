@@ -10,6 +10,10 @@
 
 <body>
 
+	<div id="logo">
+		<img alt="Logo" src="images/logo.png">
+	</div>
+
 	<div id="content">
 	
 			<div id="profile">

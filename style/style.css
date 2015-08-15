@@ -11,6 +11,13 @@ p
 	font-family: Tahoma, Arial, Sans-serif;
 }
 
+#logo
+{
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
 #content
 {
 	margin: 250px auto 0px;
