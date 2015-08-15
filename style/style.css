@@ -137,3 +137,11 @@ p
 {
 	visibility: hidden;
 }
+
+#copyright
+{
+	position: absolute;
+	right: 20px;
+	bottom: 0px;
+	color: #777;
+}

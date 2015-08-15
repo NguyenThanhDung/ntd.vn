@@ -81,6 +81,10 @@
 		</div>
 	
 	</div>
+	
+	<div id="copyright">
+		<p>© 2015 Nguyễn Thành Dũng</p> 
+	</div>
 
 </body>
 
