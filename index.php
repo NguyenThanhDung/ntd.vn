@@ -5,10 +5,11 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Nguyễn Thành Dũng's Website</title>
-	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/common.css">
+	<link rel="stylesheet" type="text/css" href="style/index.css">
 </head>
 
-<body>
+<body id="index_page">
 
 	<div id="logo">
 		<img alt="Logo" src="images/logo.png">
@@ -68,7 +69,7 @@
 					</div>
 				</div>
 				<div class="navigator">
-					<a class="link" href="constructing_page.php">
+					<a class="link" href="xclams.php">
 						<div id="xclams"></div>
 					</a>
 					<div class="name">

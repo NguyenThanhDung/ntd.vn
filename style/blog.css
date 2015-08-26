@@ -1,0 +1,52 @@
+@CHARSET "ISO-8859-1";
+
+body
+{
+	background: #333;
+	color: #ccc;
+}
+
+.wrap
+{
+	padding: 100px 0px 0px;
+	border: 1px solid red;
+}
+
+.entry
+{
+	width: 1024px;
+	margin: auto;
+	clear: both;
+	
+	border: 1px solid green;
+}
+
+.datetime
+{
+	float: left;
+	width: 200px;
+	
+	border: 1px solid blue;	
+}
+
+.content
+{
+	float: right;
+	width: 815px;
+	
+	border: 1px solid #ff0;
+}
+
+.comment_list
+{
+	float: right;
+	width: 765px;
+	margin: 0px 0px 0px 50px;
+	
+	border: 1px solid #0ff;
+}
+
+.comment_list .user
+{
+	font-weight: bold;
+}

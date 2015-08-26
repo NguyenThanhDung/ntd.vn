@@ -1,0 +1,22 @@
+@CHARSET "ISO-8859-1";
+
+p
+{
+	font-family: Tahoma, Arial, Sans-serif;
+	font-size: 0.9em;
+}
+
+#logo
+{
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+#copyright
+{
+	position: absolute;
+	right: 20px;
+	bottom: 0px;
+	color: #777;
+}
