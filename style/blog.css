@@ -16,7 +16,8 @@ body
 .wrap
 {
 	padding: 100px 0px 0px;
-	border: 1px solid red;
+	
+	//border: 1px solid red;
 }
 
 .entry
@@ -25,32 +26,38 @@ body
 	margin: auto;
 	clear: both;
 	
-	border: 1px solid green;
+	//border: 1px solid green;
 }
 
 .datetime
 {
 	float: left;
-	width: 200px;
+	width: 150px;
+	margin: 10px 0px 0px;
+	text-align: right;
 	
-	border: 1px solid blue;	
+	//border: 1px solid blue;	
 }
 
 .content
 {
 	float: right;
-	width: 815px;
+	width: 845px;
+	min-height: 60px;
+	margin: 10px 0px 0px;
+	padding: 0px 10px 0px;
+	background: #555;
 	
-	border: 1px solid #ff0;
+	//border: 1px solid #ff0;
 }
 
 .comment_list
 {
 	float: right;
-	width: 765px;
-	margin: 0px 0px 0px 50px;
+	width: 825px;
+	margin: 10px 0px 20px 40px;
 	
-	border: 1px solid #0ff;
+	//border: 1px solid #0ff;
 }
 
 .comment_list .user
