@@ -15,6 +15,12 @@
 		<img alt="Logo" src="images/logo.png">
 	</div>
 	
+	<div id="search">
+		<form>
+			<input type="text" name="search_keyword" value="Find message...">
+		</form>
+	</div>
+	
 	<div class="wrap">
 	
 		<div class="entry">			

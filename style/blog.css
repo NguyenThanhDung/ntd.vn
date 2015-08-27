@@ -6,6 +6,13 @@ body
 	color: #ccc;
 }
 
+#search
+{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
 .wrap
 {
 	padding: 100px 0px 0px;
