@@ -3,7 +3,6 @@
 body
 {
 	background: #333;
-	color: #ccc;
 }
 
 #search
@@ -47,20 +46,35 @@ body
 	margin: 10px 0px 0px;
 	padding: 0px 10px 0px;
 	background: #555;
+	border-radius: 10px;
 	
 	//border: 1px solid #ff0;
 }
 
-.comment_list
+.comments,.comment_form,.comment_link
 {
 	float: right;
 	width: 825px;
-	margin: 10px 0px 20px 40px;
 	
 	//border: 1px solid #0ff;
 }
 
-.comment_list .user
+.comments
+{
+	margin: 0px 0px 0px 40px;	
+}
+
+.comments .user
 {
 	font-weight: bold;
+}
+
+.comment_form
+{
+	margin: 10px 0px 0px 40px;
+}
+
+.comment_link
+{
+	margin: 10px 0px 0px 40px;
 }

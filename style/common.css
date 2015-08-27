@@ -1,9 +1,10 @@
 @CHARSET "ISO-8859-1";
 
-p
+p, a
 {
 	font-family: Tahoma, Arial, Sans-serif;
 	font-size: 0.9em;
+	color: #ccc;
 }
 
 #logo
