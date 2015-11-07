@@ -1,14 +1,36 @@
 @CHARSET "ISO-8859-1";
 
+p, a
+{
+	font-family: Tahoma, Arial, Sans-serif;
+	font-size: 0.9em;
+	color: #ccc;
+}
+
+#logo
+{
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+#copyright
+{
+	position: absolute;
+	right: 20px;
+	bottom: 0px;
+	color: #777;
+}
+
 body
 {
 	background: #333;
 }
 
-#search
+#login
 {
 	position: absolute;
-	top: 10px;
+	top: -5px;
 	right: 10px;
 }
 

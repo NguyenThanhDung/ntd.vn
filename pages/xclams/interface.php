@@ -6,7 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Nguyễn Thành Dũng's Website</title>
 	<link rel="stylesheet" type="text/css" href="style/common.css">
-	<link rel="stylesheet" type="text/css" href="style/blog.css">
+	<link rel="stylesheet" type="text/css" href="style/xclams.css">
 </head>
 
 <body>
@@ -15,10 +15,8 @@
 		<img alt="Logo" src="images/logo.png">
 	</div>
 	
-	<div id="search">
-		<form>
-			<input type="text" name="search_keyword" value="Find message...">
-		</form>
+	<div id="login">
+		<p><a href="login.php">Login</a> | <a href="account.php?action=new">Create account</a></p>
 	</div>
 	
 	<div class="wrap">

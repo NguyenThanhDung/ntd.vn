@@ -1,0 +1,36 @@
+@CHARSET "ISO-8859-1";
+
+#logo
+{
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+body
+{
+	background: #333;
+}
+
+p
+{
+	font-family: Tahoma, Arial, Sans-serif;
+	font-size: 0.9em;
+	color: #ccc;
+	text-align: right;
+}
+
+#form
+{
+	background: #666;
+	width: 500px;
+	margin: 200px auto 200px;
+	border-radius: 10px;
+}
+
+#form table
+{
+	width: 450px;
+	margin: 20px auto 20px;
+	//border: solid red 1px;
+}
