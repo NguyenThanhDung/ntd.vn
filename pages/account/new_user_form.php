@@ -15,7 +15,7 @@
 	</div>
 	
 	<div id="form">
-		<form action="account/create_account.php" method="post">
+		<form action="account.php?action=create_account&source=<?php echo $source; ?>" method="post">
 			<table border="0">
 				<tr>
 					<td><p>Email</p></td>

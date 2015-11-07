@@ -16,7 +16,7 @@
 	</div>
 	
 	<div id="login">
-		<p><a href="login.php">Login</a> | <a href="account.php?action=new">Create account</a></p>
+		<p><a href="login.php">Login</a> | <a href="account.php?action=new_user_form&source=xclams">Create account</a></p>
 	</div>
 	
 	<div class="wrap">
