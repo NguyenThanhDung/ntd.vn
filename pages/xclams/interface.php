@@ -15,8 +15,17 @@
 		<img alt="Logo" src="images/logo.png">
 	</div>
 	
-	<div id="login">
-		<p><a href="login.php">Login</a> | <a href="account.php?action=new_user_form&source=xclams">Create account</a></p>
+	<div id="account">
+		<?php
+		if($loggedUser)
+		{
+			echo "<p><b>$loggedUser</b> | <a href='account.php?action=logout&source=xclams'>Log out</a></p>";
+		}
+		else
+		{
+			echo "<p><a href='login.php'>Login</a> | <a href='account.php?action=new_user_form&source=xclams'>Create account</a></p>";
+		}
+		?>
 	</div>
 	
 	<div class="wrap">
@@ -33,7 +42,7 @@
 				<p><span class="user">User 1:</span> This is a comment</p>
 				<p><span class="user">User 2:</span> This is a comment</p>
 			</div>
-			<?php if($wasLogin)	{ ?>
+			<?php if($loggedUser)	{ ?>
 				<div class="comment_form">
 					<form>
 						<input type="text" name="comment_content" value="Write a comment...">
@@ -56,7 +65,7 @@
 			</div>
 			<div class="comments">
 			</div>
-			<?php if($wasLogin)	{ ?>
+			<?php if($loggedUser)	{ ?>
 				<div class="comment_form">
 					<form>
 						<input type="text" name="comment_content" value="Write a comment...">
@@ -79,7 +88,7 @@
 			</div>		
 			<div class="comments">
 			</div>
-			<?php if($wasLogin)	{ ?>
+			<?php if($loggedUser)	{ ?>
 				<div class="comment_form">
 					<form>
 						<input type="text" name="comment_content" value="Write a comment...">

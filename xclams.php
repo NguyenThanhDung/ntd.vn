@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$wasLogin = isset($_SESSION["wasLogin"]) ? $_SESSION["wasLogin"] : false;
+$loggedUser = isset($_SESSION["loggedUser"]) ? $_SESSION["loggedUser"] : false;
 
 include "pages/xclams/interface.php";
 ?>

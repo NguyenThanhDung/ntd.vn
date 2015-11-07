@@ -24,6 +24,7 @@ switch($action)
 		if($result)
 		{
 			$include_page = "pages/account/welcome_new_user.php";
+			$_SESSION["loggedUser"] = $displayName;
 		}
 		else
 		{
