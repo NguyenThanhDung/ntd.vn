@@ -41,3 +41,13 @@ p
 	color: #ccc;
 	text-align: right;
 }
+
+#welcome
+{
+	width: 600px;
+	margin: 200px auto 200px;
+	
+	font-family: Tahoma, Arial, Sans-serif;
+	text-align: center;
+	color: #ccc;	
+}

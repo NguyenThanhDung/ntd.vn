@@ -23,7 +23,7 @@ switch($action)
 		$result = UserManager::CreateUser($email, $password, $displayName);
 		if($result)
 		{
-			echo "";
+			$include_page = "pages/account/welcome_new_user.php";
 		}
 		else
 		{
