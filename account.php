@@ -34,6 +34,11 @@ switch($action)
 		
 		break;
 		
+	case "logout":
+		$_SESSION["loggedUser"] = false;
+		$include_page =  "pages/account/logging_out.php";
+		break;
+		
 	default:
 		$include_page =  "pages/account/$action.php";
 		break;
