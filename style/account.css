@@ -16,8 +16,8 @@ p
 {
 	font-family: Tahoma, Arial, Sans-serif;
 	font-size: 0.9em;
-	color: #ccc;
-	text-align: right;
+	color: red;
+	text-align: center;
 }
 
 #form
@@ -32,5 +32,12 @@ p
 {
 	width: 450px;
 	margin: 20px auto 20px;
-	//border: solid red 1px;
+}
+
+#form table p
+{
+	font-family: Tahoma, Arial, Sans-serif;
+	font-size: 0.9em;
+	color: #ccc;
+	text-align: right;
 }

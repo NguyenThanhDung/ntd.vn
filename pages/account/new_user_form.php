@@ -15,8 +15,18 @@
 	</div>
 	
 	<div id="form">
+		<?php
+		if(isset($message) && $message != "")
+		{
+			echo "<p>$message</p>";
+		}
+		?>
 		<form action="account.php?action=create_account&source=<?php echo $source; ?>" method="post">
-			<table border="0">
+			<table border="0">				
+				<tr>
+					<td><p>Name</p></td>
+					<td><input type="text" name="display_name" size="35"></td>
+				</tr>
 				<tr>
 					<td><p>Email</p></td>
 					<td><input type="email" name="email" size="40"></td>
