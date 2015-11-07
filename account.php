@@ -23,13 +23,31 @@ switch($action)
 		$result = UserManager::CreateUser($email, $password, $displayName);
 		if($result)
 		{
-			$include_page = "pages/account/welcome_new_user.php";
 			$_SESSION["loggedUser"] = $displayName;
+ 			$include_page = "pages/account/welcome_new_user.php";
 		}
 		else
 		{
 			$message = "Invalid information";
 			$include_page = "pages/account/new_user_form.php";
+		}
+		
+		break;
+		
+	case "log_in":
+		$name_or_email = $_POST["name_or_email"];
+		$password = $_POST["password"];
+		
+		$loggedUser = UserManager::LogIn($name_or_email, $password);
+		if($loggedUser)
+		{
+			$_SESSION["loggedUser"] = $loggedUser;
+ 			$include_page = "pages/account/logging_in.php";
+		}
+		else
+		{
+			$message = "Invalid information";
+			$include_page = "pages/account/log_in_form.php";
 		}
 		
 		break;

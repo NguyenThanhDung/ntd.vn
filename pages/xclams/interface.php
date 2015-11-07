@@ -23,7 +23,7 @@
 		}
 		else
 		{
-			echo "<p><a href='login.php'>Login</a> | <a href='account.php?action=new_user_form&source=xclams'>Create account</a></p>";
+			echo "<p><a href='account.php?action=log_in_form&source=xclams'>Login</a> | <a href='account.php?action=new_user_form&source=xclams'>Create account</a></p>";
 		}
 		?>
 	</div>

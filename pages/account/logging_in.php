@@ -15,7 +15,8 @@
 	</div>
 	
 	<div id="welcome">		
-		<h4>Logging out...</h3>
+		<h2>Welcome back <?php echo $loggedUser; ?>!</h1>
+		<h4>Have fun with my blog</h3>
 		<p>&nbsp;</p>
 		<img src="images/loading.gif"/>
 	</div>
