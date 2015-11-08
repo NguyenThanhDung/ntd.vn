@@ -45,7 +45,7 @@ class Comment
 	
 	function GetFormatedDate()
 	{
-		return date("M dS, Y", $this->dateTime);
+		return date("M dS", $this->dateTime);
 	}
 	
 	function GetEntryType()

@@ -54,7 +54,9 @@
 			$comments_count = $comments[$i] ? count($comments[$i]) : 0;
 			for($j = 0; $j < $comments_count; $j++)
 			{
-				echo '<p><span class="user">'.$comments[$i][$j]->GetUser()->GetDisplayName().':</span> '.$comments[$i][$j]->GetContent().'</p>';
+				echo '<p>'.$comments[$i][$j]->GetFormatedTime().', '.$comments[$i][$j]->GetFormatedDate().' - ';
+				echo '<span class="user">'.$comments[$i][$j]->GetUser()->GetDisplayName().'</span>: ';
+				echo $comments[$i][$j]->GetContent().'</p>';
 			}
 			echo '	</div';
 			
