@@ -10,17 +10,18 @@ class XclamManager
 		
 		$date1 = mktime(8, 27, 0, 8, 26, 2015);		
 		$xclam1 = new Xclam(1, 
-				"W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding.", 
+				"<p>[NEW] W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding.</p>
+				<p>Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using this site, you agree to have read and accepted our terms of use, cookie and privacy policy. Copyright 1999-2015 by Refsnes Data. All Rights Reserved.</p>", 
 				$date1);
 		
 		$date2 = mktime(10, 32, 0, 8, 26, 2015);		
 		$xclam2 = new Xclam(2, 
-				"Used together with the direction property to set or return whether the text should be overridden to support multiple languages in the same document.", 
+				"<p>[NEW] Used together with the direction property to set or return whether the text should be overridden to support multiple languages in the same document</p>", 
 				$date2);
 		
 		$date3 = mktime(14, 8, 0, 8, 26, 2015);		
 		$xclam3 = new Xclam(3, 
-				"Increases or decreases the space between words in a text.", 
+				"<p>[NEW] Increases or decreases the space between words in a text</p>", 
 				$date3);
 		
 		return array($xclam1, $xclam2, $xclam3);

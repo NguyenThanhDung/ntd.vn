@@ -35,8 +35,7 @@
 				<p><?php echo $xclams[0]->GetFormatedTime()."<br/>".$xclams[0]->GetFormatedDate(); ?></p>
 			</div>			
 			<div class="content">
-				<p>W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding.</p>
-				<p>Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using this site, you agree to have read and accepted our terms of use, cookie and privacy policy. Copyright 1999-2015 by Refsnes Data. All Rights Reserved.</p>
+				<?php echo $xclams[0]->GetContent(); ?>
 			</div>
 			<div class="comments">
 				<p><span class="user">User 1:</span> This is a comment</p>
@@ -61,7 +60,7 @@
 				<p><?php echo $xclams[1]->GetFormatedTime()."<br/>".$xclams[1]->GetFormatedDate(); ?></p>
 			</div>			
 			<div class="content">
-				<p>Used together with the direction property to set or return whether the text should be overridden to support multiple languages in the same document</p>
+				<?php echo $xclams[1]->GetContent(); ?>
 			</div>
 			<div class="comments">
 			</div>
@@ -84,7 +83,7 @@
 				<p><?php echo $xclams[2]->GetFormatedTime()."<br/>".$xclams[2]->GetFormatedDate(); ?></p>
 			</div>			
 			<div class="content">
-				<p>Increases or decreases the space between words in a text</p>
+				<?php echo $xclams[2]->GetContent(); ?>
 			</div>		
 			<div class="comments">
 			</div>
