@@ -61,7 +61,7 @@
 			else
 			{
 				echo '<div class="comment_link">';
-				echo '	<a href="login.php">Comment</a>';
+				echo '	<a href="account.php?action=log_in_form&source=xclams">Comment</a>';
 				echo '</div>';
 			}
 			
