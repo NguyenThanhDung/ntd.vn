@@ -32,7 +32,7 @@
 	
 		<div class="entry">			
 			<div class="datetime">
-				<p>8:27 AM, Wed<br/>Aug 26th, 2015</p>
+				<p><?php echo $xclams[0]->GetFormatedTime()."<br/>".$xclams[0]->GetFormatedDate(); ?></p>
 			</div>			
 			<div class="content">
 				<p>W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding.</p>
@@ -58,7 +58,7 @@
 	
 		<div class="entry">			
 			<div class="datetime">
-				<p>10:32 AM, Wed<br/>Aug 26th, 2015</p>
+				<p><?php echo $xclams[1]->GetFormatedTime()."<br/>".$xclams[1]->GetFormatedDate(); ?></p>
 			</div>			
 			<div class="content">
 				<p>Used together with the direction property to set or return whether the text should be overridden to support multiple languages in the same document</p>
@@ -81,7 +81,7 @@
 	
 		<div class="entry">			
 			<div class="datetime">
-				<p>2:08 PM, Wed<br/>Aug 26th, 2015</p>
+				<p><?php echo $xclams[2]->GetFormatedTime()."<br/>".$xclams[2]->GetFormatedDate(); ?></p>
 			</div>			
 			<div class="content">
 				<p>Increases or decreases the space between words in a text</p>

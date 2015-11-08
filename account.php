@@ -5,6 +5,7 @@ include "manager/UserManager.php";
 include "objects/User.php";
 
 session_start();
+date_default_timezone_set("Asia/Saigon");
 
 $action = $_GET["action"];
 $source = $_GET["source"];
