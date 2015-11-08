@@ -15,7 +15,7 @@
 	</div>
 	
 	<div id="welcome">		
-		<h2>Welcome back <?php echo $loggedUser; ?>!</h1>
+		<h2>Welcome back <?php echo $loggedUser->GetDisplayName(); ?>!</h1>
 		<h4>Have fun with my blog</h3>
 		<p>&nbsp;</p>
 		<img src="images/loading.gif"/>
