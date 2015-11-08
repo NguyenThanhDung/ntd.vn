@@ -19,7 +19,7 @@
 		<?php
 		if($loggedUser)
 		{
-			echo "<p><b>$loggedUser</b> | <a href='account.php?action=logout&source=xclams'>Log out</a></p>";
+			echo "<p><b>".$loggedUser->GetDisplayName()."</b> | <a href='account.php?action=logout&source=xclams'>Log out</a></p>";
 		}
 		else
 		{

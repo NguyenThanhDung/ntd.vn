@@ -1,9 +1,10 @@
 <?php
-session_start();
-
 include "config.php";
 include "utils.php"; 
 include "manager/UserManager.php";
+include "objects/User.php";
+
+session_start();
 
 $action = $_GET["action"];
 $source = $_GET["source"];
@@ -20,10 +21,10 @@ switch($action)
 		$password = $_POST["password"];
 		$displayName = $_POST["display_name"];
 		
-		$result = UserManager::CreateUser($email, $password, $displayName);
-		if($result)
+		$user = UserManager::CreateUser($email, $password, $displayName);
+		if($user)
 		{
-			$_SESSION["loggedUser"] = $displayName;
+			$_SESSION["loggedUser"] = $user;
  			$include_page = "pages/account/welcome_new_user.php";
 		}
 		else

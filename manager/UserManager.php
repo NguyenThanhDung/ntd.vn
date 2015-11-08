@@ -3,15 +3,18 @@ class UserManager
 {
 	static function CreateUser($email, $password, $displayName)
 	{
-		return true;
+		$user = new User("dung@email.com", "123", "Dung", "", User::ADMIN);
+		return $user;
 	}
 	
 	static function Login($name_or_email, $password)
 	{
-		if($name_or_email == "Dung" && $password == "123")
-			return "Dung";
-		if($name_or_email == "dung@email.com" && $password == "123")
-			return "Dung";
+		$user = new User("dung@email.com", "123", "Dung", "", User::ADMIN);
+		
+		if($name_or_email == $user->GetEmail() && $password == $user->GetPassword())
+			return $user;
+		if($name_or_email == $user->GetDisplayName() && $password == $user->GetPassword())
+			return $user;
 		return false;
 	}
 }
