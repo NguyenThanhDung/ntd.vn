@@ -38,8 +38,8 @@
 				<?php echo $xclams[0]->GetContent(); ?>
 			</div>
 			<div class="comments">
-				<p><span class="user">User 1:</span> This is a comment</p>
-				<p><span class="user">User 2:</span> This is a comment</p>
+				<p><span class="user"><?php echo $comments[0][0]->GetUser()->GetDisplayName(); ?>:</span> <?php echo $comments[0][0]->GetContent(); ?></p>
+				<p><span class="user"><?php echo $comments[0][1]->GetUser()->GetDisplayName(); ?>:</span> <?php echo $comments[0][1]->GetContent(); ?></p>
 			</div>
 			<?php if($loggedUser)	{ ?>
 				<div class="comment_form">

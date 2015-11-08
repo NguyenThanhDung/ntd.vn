@@ -7,9 +7,6 @@ class User
 	var $avatar;
 	var $type;
 	
-	const GUEST = 0;
-	const ADMIN = 1;
-	
 	function User($email, $password, $displayName, $avatar, $type)
 	{
 		$this->email = $email;
