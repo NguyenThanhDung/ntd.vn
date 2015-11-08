@@ -30,76 +30,44 @@
 	
 	<div class="wrap">
 	
-		<div class="entry">			
-			<div class="datetime">
-				<p><?php echo $xclams[0]->GetFormatedTime()."<br/>".$xclams[0]->GetFormatedDate(); ?></p>
-			</div>			
-			<div class="content">
-				<?php echo $xclams[0]->GetContent(); ?>
-			</div>
-			<div class="comments">
-				<p><span class="user"><?php echo $comments[0][0]->GetUser()->GetDisplayName(); ?>:</span> <?php echo $comments[0][0]->GetContent(); ?></p>
-				<p><span class="user"><?php echo $comments[0][1]->GetUser()->GetDisplayName(); ?>:</span> <?php echo $comments[0][1]->GetContent(); ?></p>
-			</div>
-			<?php if($loggedUser)	{ ?>
-				<div class="comment_form">
-					<form>
-						<input type="text" name="comment_content" value="Write a comment...">
-						<input type="submit" value="Send">
-					</form>
-				</div>
-			<?php } else {	?>
-				<div class="comment_link">
-					<a href="login.php">Comment</a>
-				</div>
-			<?php } ?>
-		</div>
-	
-		<div class="entry">			
-			<div class="datetime">
-				<p><?php echo $xclams[1]->GetFormatedTime()."<br/>".$xclams[1]->GetFormatedDate(); ?></p>
-			</div>			
-			<div class="content">
-				<?php echo $xclams[1]->GetContent(); ?>
-			</div>
-			<div class="comments">
-			</div>
-			<?php if($loggedUser)	{ ?>
-				<div class="comment_form">
-					<form>
-						<input type="text" name="comment_content" value="Write a comment...">
-						<input type="submit" value="Send">
-					</form>
-				</div>
-			<?php } else {	?>
-				<div class="comment_link">
-					<a href="login.php">Comment</a>
-				</div>
-			<?php } ?>
-		</div>
-	
-		<div class="entry">			
-			<div class="datetime">
-				<p><?php echo $xclams[2]->GetFormatedTime()."<br/>".$xclams[2]->GetFormatedDate(); ?></p>
-			</div>			
-			<div class="content">
-				<?php echo $xclams[2]->GetContent(); ?>
-			</div>		
-			<div class="comments">
-			</div>
-			<?php if($loggedUser)	{ ?>
-				<div class="comment_form">
-					<form>
-						<input type="text" name="comment_content" value="Write a comment...">
-						<input type="submit" value="Send">
-					</form>
-				</div>
-			<?php } else {	?>
-				<div class="comment_link">
-					<a href="login.php">Comment</a>
-				</div>
-			<?php } ?>
-		</div>
+	<?php
+		for($i = 0; $i < $xclams_count; $i++)
+		{
+			echo '<div class="entry">';
+			
+			echo '	<div class="datetime">';
+			echo '		<p>'.$xclams[$i]->GetFormatedTime().'<br/>'.$xclams[$i]->GetFormatedDate().'</p>';
+			echo '	</div>';
+			
+			echo '	<div class="content">'.$xclams[$i]->GetContent().'</div>';
+			
+			echo '	<div class="comments">';
+			$comments_count = $comments[$i] ? count($comments[$i]) : 0;
+			for($j = 0; $j < $comments_count; $j++)
+			{
+				echo '<p><span class="user">'.$comments[$i][$j]->GetUser()->GetDisplayName().':</span> '.$comments[$i][$j]->GetContent().'</p>';
+			}
+			echo '	</div';
+			
+			if($loggedUser)
+			{
+				echo '<div class="comment_form">';
+				echo '	<form>';
+				echo '		<input type="text" name="comment_content" value="Write a comment...">';
+				echo '		<input type="submit" value="Send">';
+				echo '	</form>';
+				echo '</div>';
+			}
+			else
+			{
+				echo '<div class="comment_link">';
+				echo '	<a href="login.php">Comment</a>';
+				echo '</div>';
+			}
+			
+			echo '</div>';
+		}
+	?>
 		
 	</div>
 
