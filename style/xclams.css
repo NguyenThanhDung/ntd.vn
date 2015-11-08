@@ -37,8 +37,18 @@ body
 .wrap
 {
 	padding: 100px 0px 0px;
-	
-	//border: 1px solid red;
+}
+
+.enter_xclam
+{
+	width: 1024px;
+	margin: auto;
+	text-align: center;
+}
+
+.enter_xclam textarea
+{
+	vertical-align: text-top;	
 }
 
 .entry

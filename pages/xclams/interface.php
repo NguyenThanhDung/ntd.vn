@@ -30,6 +30,15 @@
 	
 	<div class="wrap">
 	
+	<div class="enter_xclam">
+		<?php if($loggedUser) {	?>
+		<form>
+			<textarea name="content" rows="4" cols="80">How are you today?</textarea>
+			<input type="submit" value="Send">;
+		</form>
+		<?php } ?>
+	</div>
+	
 	<?php
 		for($i = 0; $i < $xclams_count; $i++)
 		{
