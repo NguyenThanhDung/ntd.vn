@@ -1,3 +1,14 @@
+<?php
+$xclams = XclamManager::GetXclams(1);
+$xclams_count = count($xclams);
+
+$comments = array();
+for($i =0; $i < $xclams_count; $i++)
+{
+	$comments[$i] = CommentManager::GetComments(EntryType::XCLAM, $xclams[$i]->GetId());
+}
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -64,7 +75,8 @@
 			{
 				echo '<div class="comment_form">';
 				echo '	<form>';
-				echo '		<input type="text" name="comment_content" value="Write a comment...">';
+				echo '		<input type="text" name="content" value="Write a comment...">';
+				echo '		<input type="hidden" name="entry_id" value="'.EntryType::XCLAM.'">';
 				echo '		<input type="submit" value="Send">';
 				echo '	</form>';
 				echo '</div>';

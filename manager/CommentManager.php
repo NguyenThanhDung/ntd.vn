@@ -28,5 +28,28 @@ class CommentManager
 			return false;
 		}
 	}
+	
+	static function GetCommentById($id)
+	{
+		$date1 = mktime(8, 35, 0, 8, 26, 2015);
+		$user1 = new User("lai@email.com", "123", "Lai", "", UserType::GUEST);
+		$comment1 = new Comment(1, $user1, "This is Lai's comment", $date1, $entryType, $entryId);
+		return $comment1;
+	}
+	
+	static function PostComment($user, $content, $entryType, $entryId)
+	{
+		
+	}
+	
+	static function UpdateComment($id, $user, $content, $entryType, $entryId)
+	{
+		
+	}
+	
+	static function DeleteComment($id)
+	{
+		
+	}
 }
 ?>
