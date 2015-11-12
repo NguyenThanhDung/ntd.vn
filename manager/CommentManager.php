@@ -51,5 +51,25 @@ class CommentManager
 	{
 		
 	}
+	
+	static function CreateTable()
+	{
+		$sql = "CREATE TABLE Comment(
+					Id int NOT NULL AUTO_INCREMENT,
+					Email varchar(255) NOT NULL,
+					Content varchar(1024) NOT NULL,
+					DateTime int NOT NULL DEFAULT 0,
+					EntryType int NOT NULL DEFAULT 1,
+					EntryId int NOT NULL DEFAULT 1,
+					PRIMARY KEY (Id)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8";
+		return DataManager::ExercuseQuery($sql);
+	}
+	
+	static function DropTable()
+	{
+		$sql = "DROP TABLE IF EXISTS Comment";
+		return DataManager::ExercuseQuery($sql);
+	}
 }
 ?>

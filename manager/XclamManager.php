@@ -51,5 +51,22 @@ class XclamManager
 	{
 		
 	}
+	
+	static function CreateTable()
+	{
+		$sql = "CREATE TABLE Xclam(
+					Id int NOT NULL AUTO_INCREMENT,
+					Content varchar(1024) NOT NULL,					
+					DateTime int NOT NULL DEFAULT 0,
+					PRIMARY KEY (Id)
+				) ENGINE=InnoDB DEFAULT CHARSET=utf8";
+		return DataManager::ExercuseQuery($sql);
+	}
+	
+	static function DropTable()
+	{
+		$sql = "DROP TABLE IF EXISTS Xclam";
+		return DataManager::ExercuseQuery($sql);
+	}
 }
 ?>
