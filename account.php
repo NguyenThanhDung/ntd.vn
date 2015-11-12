@@ -19,19 +19,49 @@ $message = "";
 switch($action)
 {
 	case "create_account":
+		$displayName = isset($_POST["display_name"]) ? $_POST["display_name"] : false;
 		$email = isset($_POST["email"]) ? $_POST["email"] : false;
 		$password = isset($_POST["password"]) ? $_POST["password"] : false;
-		$displayName = isset($_POST["display_name"]) ? $_POST["display_name"] : false;
+		$retypePassword = isset($_POST["retype_password"]) ? $_POST["retype_password"] : false;
 		
-		if($email && $password && $displayName)
+		$error = 0;
+		if(!$displayName || !$email || !$password || !$retypePassword)
+		{
+			$error = 1;
+		}
+		if(!$error && $password != $retypePassword)
+		{
+			$error = 2;
+		}
+		
+		if(!$error)
 		{
 			$user = UserManager::CreateUser($email, $password, $displayName);
-			$_SESSION["loggedUser"] = $user;
- 			$include_page = "pages/account/welcome_new_user.php";
+			if($user)
+			{
+				$_SESSION["loggedUser"] = $user;
+	 			$include_page = "pages/account/welcome_new_user.php";
+			}
+			else
+			{
+				$error = 3;
+			}
 		}
-		else
+		
+		if($error > 0)
 		{
-			$message = "Invalid information";
+			switch($error)
+			{
+				case 1:
+					$message = "Please fill in all information";
+					break;
+				case 2:
+					$message = "Password does not match";
+					break;
+				case 3:
+					$message = "This email or display name has already exist";
+					break;
+			}
 			$include_page = "pages/account/new_user_form.php";
 		}
 		

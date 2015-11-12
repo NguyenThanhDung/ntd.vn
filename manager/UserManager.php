@@ -65,12 +65,11 @@ class UserManager
 	static function DidEmailExist($newEmail)
 	{
 		$sql = "SELECT Email FROM User";
-		$emails = DataManager::ExercuseQuery($sql);
+		$result = DataManager::ExercuseQuery($sql);
 		
-		$count = count($emails);		
-		for($i = 0; $i < $count; $i++)
+		while($row = mysql_fetch_array($result))
 		{
-			if($newEmail == $emails[$i])
+			if($newEmail == $row["Email"])
 			{
 				return true;
 			}
@@ -82,12 +81,11 @@ class UserManager
 	static function DidDisplayNameExist($newDisplayName)
 	{
 		$sql = "SELECT DisplayName FROM User";
-		$displayNames = DataManager::ExercuseQuery($sql);
+		$result = DataManager::ExercuseQuery($sql);
 		
-		$count = count($displayNames);
-		for($i = 0; $i < $count; $i++)
+		while($row = mysql_fetch_array($result))
 		{
-			if($newDisplayName == $displayNames[$i])
+			if($newDisplayName == $row["DisplayName"])
 			{
 				return true;
 			}
