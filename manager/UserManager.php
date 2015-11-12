@@ -34,6 +34,34 @@ class UserManager
 		}
 	}
 	
+	static function Login($name_or_email, $password)
+	{
+		$sql = "SELECT Email,DisplayName,Password FROM User";
+		$users = DataManager::ExercuseQuery($sql);
+		
+		while($row = mysql_fetch_array($users))
+		{
+			if($name_or_email == $row["Email"] && $password == $row["Password"])
+			{				
+				return self::GetUserByEmail($row["Email"]);
+			}
+			if($name_or_email == $row["DisplayName"] && $password == $row["Password"])
+			{
+				return self::GetUserByEmail($row["Email"]);
+			}
+		}
+		
+		return false;
+	}
+	
+	static function GetUserByEmail($email)
+	{
+		$sql = "SELECT * FROM User WHERE Email='$email'";
+		$result = DataManager::ExercuseQuery($sql);
+		$row = mysql_fetch_array($result);
+		return new User($row["Email"], $row["Password"], $row["DisplayName"], $row["Avatar"], $row["Type"]);
+	}
+	
 	static function DidEmailExist($newEmail)
 	{
 		$sql = "SELECT Email FROM User";
@@ -65,17 +93,6 @@ class UserManager
 			}
 		}
 		
-		return false;
-	}
-	
-	static function Login($name_or_email, $password)
-	{
-		$user = new User("dung@email.com", "123", "Dung", "", UserType::ADMIN);
-		
-		if($name_or_email == $user->GetEmail() && $password == $user->GetPassword())
-			return $user;
-		if($name_or_email == $user->GetDisplayName() && $password == $user->GetPassword())
-			return $user;
 		return false;
 	}
 	
