@@ -1,6 +1,7 @@
 <?php
 include "config.php";
-include "utils.php"; 
+include "utils.php";
+include "database/DataManager.php";
 include "manager/UserManager.php";
 include "objects/User.php";
 
@@ -18,13 +19,13 @@ $message = "";
 switch($action)
 {
 	case "create_account":
-		$email = $_POST["email"];
-		$password = $_POST["password"];
-		$displayName = $_POST["display_name"];
+		$email = isset($_POST["email"]) ? $_POST["email"] : false;
+		$password = isset($_POST["password"]) ? $_POST["password"] : false;
+		$displayName = isset($_POST["display_name"]) ? $_POST["display_name"] : false;
 		
-		$user = UserManager::CreateUser($email, $password, $displayName);
-		if($user)
+		if($email && $password && $displayName)
 		{
+			$user = UserManager::CreateUser($email, $password, $displayName);
 			$_SESSION["loggedUser"] = $user;
  			$include_page = "pages/account/welcome_new_user.php";
 		}
@@ -37,14 +38,22 @@ switch($action)
 		break;
 		
 	case "log_in":
-		$name_or_email = $_POST["name_or_email"];
-		$password = $_POST["password"];
+		$name_or_email = isset($_POST["name_or_email"]) ? $_POST["name_or_email"] : false;
+		$password = isset($_POST["password"]) ? $_POST["password"] : false;
 		
-		$loggedUser = UserManager::LogIn($name_or_email, $password);
-		if($loggedUser)
+		if($name_or_email && $password)
 		{
-			$_SESSION["loggedUser"] = $loggedUser;
- 			$include_page = "pages/account/logging_in.php";
+			$loggedUser = UserManager::LogIn($name_or_email, $password);
+			if($loggedUser)
+			{
+				$_SESSION["loggedUser"] = $loggedUser;
+	 			$include_page = "pages/account/logging_in.php";
+			}
+			else
+			{
+				$message = "Invalid information";
+				$include_page = "pages/account/log_in_form.php";
+			}
 		}
 		else
 		{

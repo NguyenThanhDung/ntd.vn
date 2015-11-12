@@ -9,8 +9,63 @@ class UserManager
 {	
 	static function CreateUser($email, $password, $displayName)
 	{
-		$user = new User("dung@email.com", "123", "Dung", "", UserType::ADMIN);
-		return $user;
+		$didEmailExist = self::DidEmailExist($email);
+		if($didEmailExist)
+			return false;
+		
+		$didDisplayNameExist = self::DidDisplayNameExist($displayName);
+		if($didDisplayNameExist)
+			return false;
+		
+		$sql = "INSERT INTO User (Email,Password,DisplayName)
+				VALUES ('".$email."',
+						'".$password."',
+						'".$displayName."')";
+		$result = DataManager::ExercuseQuery($sql);
+		
+		if($result)
+		{
+			$user = new User($email, $password, $displayName, "", UserType::GUEST);
+			return $user;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	static function DidEmailExist($newEmail)
+	{
+		$sql = "SELECT Email FROM User";
+		$emails = DataManager::ExercuseQuery($sql);
+		
+		$count = count($emails);		
+		for($i = 0; $i < $count; $i++)
+		{
+			if($newEmail == $emails[$i])
+			{
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
+	static function DidDisplayNameExist($newDisplayName)
+	{
+		$sql = "SELECT DisplayName FROM User";
+		$displayNames = DataManager::ExercuseQuery($sql);
+		
+		$count = count($displayNames);
+		for($i = 0; $i < $count; $i++)
+		{
+			if($newDisplayName == $displayNames[$i])
+			{
+				return true;
+			}
+		}
+		
+		return false;
 	}
 	
 	static function Login($name_or_email, $password)
