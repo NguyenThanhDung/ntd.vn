@@ -26,6 +26,7 @@ $loggedUser = isset($_SESSION["loggedUser"]) ? $_SESSION["loggedUser"] : false;
 $action = isset($_GET["action"]) ? $_GET["action"] : ACTION_NONE;
 $includedPage = "list";
 $message = false;
+$editingXclam = false;
 
 if($loggedUser)
 {
@@ -41,18 +42,24 @@ if($loggedUser)
 		case ACTION_EDIT_XCLAM_FORM:
 			if($loggedUser->GetType() == UserType::ADMIN)
 			{
-				$xclamId = $_GET["id"];
-				$editingXclam = XclamManager::GetXclamById($xclamId);
-				$includedPage = "edit_xclam";
+				$id = isset($_GET["id"]) ? $_GET["id"] : false;
+				$editingXclam = XclamManager::GetXclamById($id);
+				if($id && $editingXclam)
+				{
+					$includedPage = "edit_xclam";
+				}
 			}
 			break;
 			
 		case ACTION_SUBMIT_EDITED_XCLAM:
 			if($loggedUser->GetType() == UserType::ADMIN)
 			{
-				$id = $_POST["id"];
-				$content = $_POST["content"];
-				XclamManager::UpdateXclam($xclamId, $content);
+				$id = isset($_POST["id"]) ? $_POST["id"] : false;
+				$content = isset($_POST["content"]) ? $_POST["content"] : false;
+				if($id && $content)
+				{
+					XclamManager::UpdateXclam($id, $content);
+				}
 			}
 			break;
 			

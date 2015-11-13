@@ -27,12 +27,19 @@ class XclamManager
 	
 	static function GetXclamById($id)
 	{
-		$date1 = mktime(8, 27, 0, 8, 26, 2015);
-		$xclam1 = new Xclam(1,
-				"<p>[NEW] W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding.</p>
-				<p>Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using this site, you agree to have read and accepted our terms of use, cookie and privacy policy. Copyright 1999-2015 by Refsnes Data. All Rights Reserved.</p>",
-				$date1);
-		return $xclam1;
+		$sql = "SELECT * FROM Xclam WHERE Id=$id";
+		$result = DataManager::ExercuseQuery($sql);
+		
+		while($row = mysql_fetch_array($result))
+		{
+			$id = $row["Id"];
+			$content = $row["Content"];
+			$dateTime = $row["DateTime"];
+			
+			return new Xclam($id, $content, $dateTime);
+		}
+		
+		return false;
 	}
 	
 	static function PostXclam($content)
@@ -46,7 +53,10 @@ class XclamManager
 	
 	static function UpdateXclam($id, $content)
 	{
+		$content = self::ProcessContent($content);
 		
+		$sql = "UPDATE Xclam SET Content='$content' WHERE Id=$id";				
+		return DataManager::ExercuseQuery($sql);		
 	}
 	
 	static function DeleteXclam($id)

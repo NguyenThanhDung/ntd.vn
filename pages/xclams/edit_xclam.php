@@ -14,13 +14,15 @@
 		<img alt="Logo" src="images/logo.png">
 	</div>
 	
-	<div id="form">
-		<div class="enter_xclam">
-			<form action="xclams.php?action=<?php echo ACTION_SUBMIT_EDITED_XCLAM; ?>" method="post">
-				<input type="hidden" name="id" value="<?php echo $editingXclam->GetId(); ?>"/>
-				<textarea name="content" rows="4" cols="80"><?php echo $editingXclam->GetContent(); ?></textarea>
-				<input type="submit" value="Send">;
-			</form>
+	<div class="wrap">
+		<div id="form">
+			<div class="enter_xclam">
+				<form action="xclams.php?action=<?php echo ACTION_SUBMIT_EDITED_XCLAM; ?>" method="post">
+					<input type="hidden" name="id" value="<?php echo $editingXclam->GetId(); ?>"/>
+					<textarea name="content" rows="4" cols="80"><?php echo $editingXclam->GetContent(); ?></textarea>
+					<input type="submit" value="Send">;
+				</form>
+			</div>
 		</div>
 	</div>
 	
