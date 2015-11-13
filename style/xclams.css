@@ -1,10 +1,16 @@
 @CHARSET "ISO-8859-1";
 
-p, a
+p
 {
 	font-family: Tahoma, Arial, Sans-serif;
 	font-size: 0.9em;
 	color: #ccc;
+}
+
+a
+{
+	font-family: Tahoma, Arial, Sans-serif;
+	font-size: 0.9em;
 }
 
 a:HOVER
@@ -37,6 +43,11 @@ body
 	position: absolute;
 	top: -5px;
 	right: 10px;
+}
+
+#account a
+{
+	color: #ccc;
 }
 
 .wrap
@@ -135,4 +146,9 @@ body
 .comment_link
 {
 	margin: 10px 0px 0px 40px;
+}
+
+.comment_link a
+{
+	color: #999;
 }
