@@ -59,6 +59,15 @@ for($i =0; $i < $xclams_count; $i++)
 			echo '		<p>'.$xclams[$i]->GetFormatedTime().'<br/>'.$xclams[$i]->GetFormatedDate().'</p>';
 			echo '	</div>';
 			
+			if($loggedUser && $loggedUser->GetType() == UserType::ADMIN)
+			{
+				echo '<div class="edit_delete"><p>Edit<br/>Delete</p></div>';
+			}
+			else
+			{
+				echo '<div class="edit_delete"><p>&nbsp;</p></div>';
+			}
+			
 			echo '	<div class="content">'.$xclams[$i]->GetContent().'</div>';
 			
 			echo '	<div class="comments">';

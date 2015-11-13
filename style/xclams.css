@@ -63,7 +63,7 @@ body
 .datetime
 {
 	float: left;
-	width: 150px;
+	width: 130px;
 	margin: 10px 0px 0px;
 	text-align: right;
 	
@@ -73,7 +73,7 @@ body
 .content
 {
 	float: right;
-	width: 845px;
+	width: 805px;
 	min-height: 60px;
 	margin: 10px 0px 0px;
 	padding: 0px 10px 0px;
@@ -81,6 +81,21 @@ body
 	border-radius: 10px;
 	
 	//border: 1px solid #ff0;
+}
+
+.edit_delete
+{
+	float: right;
+	width: 50px;
+	margin: 5px 0px 0px;
+	padding: 0px 5px 0px;
+	
+	//border: 1px solid red;
+}
+
+.edit_delete p
+{
+	color: #999;
 }
 
 .comments,.comment_form,.comment_link
