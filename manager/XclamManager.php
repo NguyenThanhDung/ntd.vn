@@ -8,7 +8,7 @@ class XclamManager
 			$page = 1;
 		}
 		
-		$sql = "SELECT * FROM Xclam";
+		$sql = "SELECT * FROM Xclam ORDER BY DateTime DESC";
 		$result = DataManager::ExercuseQuery($sql);
 		
 		$xclams = array();
