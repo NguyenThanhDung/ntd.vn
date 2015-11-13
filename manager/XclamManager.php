@@ -37,9 +37,13 @@ class XclamManager
 		return $xclam1;
 	}
 	
-	static function PostXclams($content)
+	static function PostXclam($content)
 	{
+		$content = str_replace("'", "\'", $content);
+		$dateTime = mktime(date("H"), date("i"), date("s"), date("m"), date("d"), date("Y"));
 		
+		$sql = "INSERT INTO Xclam (Content, DateTime) VALUES ('$content', $dateTime)";
+		return DataManager::ExercuseQuery($sql);
 	}
 	
 	static function UpdateXclam($id, $content)

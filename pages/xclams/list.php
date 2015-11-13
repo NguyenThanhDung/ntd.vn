@@ -43,7 +43,7 @@ for($i =0; $i < $xclams_count; $i++)
 	
 	<div class="enter_xclam">
 		<?php if($loggedUser && $loggedUser->GetType() == UserType::ADMIN) {	?>
-		<form>
+		<form action="xclams.php?action=<?php echo ACTION_POST_XCLAM; ?>" method="post">
 			<textarea name="content" rows="4" cols="80">How are you today?</textarea>
 			<input type="submit" value="Send">;
 		</form>

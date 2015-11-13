@@ -1,7 +1,9 @@
 <?php
+include "config.php";
 include "objects/User.php";
 include "objects/Xclam.php";
 include "objects/Comment.php";
+include "database/DataManager.php";
 include "manager/UserManager.php";
 include "manager/XclamManager.php";
 include "manager/CommentManager.php";
@@ -30,10 +32,9 @@ if($loggedUser)
 	switch($action)
 	{
 		case ACTION_POST_XCLAM:
-			if($loggedUser->GetType() == UserType::ADMIN)
+			if($loggedUser->GetType() == UserType::ADMIN && isset($_POST["content"]))
 			{
-				$content = $_POST["content"];
-				XclamManager::PostXclam($content);
+				XclamManager::PostXclam($_POST["content"]);
 			}
 			break;
 			
