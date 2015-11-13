@@ -59,8 +59,10 @@ if($loggedUser)
 		case ACTION_DELETE_XCLAM:
 			if($loggedUser->GetType() == UserType::ADMIN)
 			{
-				$id = $_GET["id"];
-				XclamManager::DeleteXclam($id);
+				if(isset($_GET["id"]))
+				{
+					XclamManager::DeleteXclam($_GET["id"]);
+				}
 			}
 			break;
 			

@@ -51,7 +51,8 @@ class XclamManager
 	
 	static function DeleteXclam($id)
 	{
-		
+		$sql = "DELETE FROM Xclam WHERE Id=$id";
+		return DataManager::ExercuseQuery($sql);
 	}
 	
 	static function ProcessContent($content)
