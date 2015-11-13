@@ -44,7 +44,7 @@ class XclamManager
 	
 	static function PostXclam($content)
 	{
-		$content = self::ProcessContent($content);		
+		$content = str_replace("'", "\'", $content);
 		$dateTime = mktime(date("H"), date("i"), date("s"), date("m"), date("d"), date("Y"));
 		
 		$sql = "INSERT INTO Xclam (Content, DateTime) VALUES ('$content', $dateTime)";
@@ -53,8 +53,7 @@ class XclamManager
 	
 	static function UpdateXclam($id, $content)
 	{
-		$content = self::ProcessContent($content);
-		
+		$content = str_replace("'", "\'", $content);		
 		$sql = "UPDATE Xclam SET Content='$content' WHERE Id=$id";				
 		return DataManager::ExercuseQuery($sql);		
 	}
@@ -63,15 +62,6 @@ class XclamManager
 	{
 		$sql = "DELETE FROM Xclam WHERE Id=$id";
 		return DataManager::ExercuseQuery($sql);
-	}
-	
-	static function ProcessContent($content)
-	{
-		$content = str_replace("'", "\'", $content);
-		$content = str_replace("\n", "<br/>", $content);
-		$content = "<p>$content</p>";
-		
-		return $content;
 	}
 	
 	static function CreateTable()

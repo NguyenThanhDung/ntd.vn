@@ -71,7 +71,7 @@ for($i =0; $i < $xclams_count; $i++)
 				echo '<div class="edit_delete"><p>&nbsp;</p></div>';
 			}
 			
-			echo '	<div class="content">'.$xclams[$i]->GetContent().'</div>';
+			echo '	<div class="content">'.$xclams[$i]->GetFormatedContent().'</div>';
 			
 			echo '	<div class="comments">';
 			$comments_count = $comments[$i] ? count($comments[$i]) : 0;

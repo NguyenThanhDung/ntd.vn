@@ -22,6 +22,12 @@ class Xclam
 		return $this->content;
 	}
 	
+	function GetFormatedContent()
+	{
+		$this->content = "<p>".str_replace("\n", "<br/>", $this->content)."</p>";		
+		return $this->content;
+	}
+	
 	function GetDateTimeAsSecond()
 	{
 		return $this->dateTime;
