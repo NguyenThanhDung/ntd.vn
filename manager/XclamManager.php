@@ -8,23 +8,21 @@ class XclamManager
 			$page = 1;
 		}
 		
-		$date1 = mktime(8, 27, 0, 8, 26, 2015);		
-		$xclam1 = new Xclam(1, 
-				"<p>[NEW] W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding.</p>
-				<p>Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using this site, you agree to have read and accepted our terms of use, cookie and privacy policy. Copyright 1999-2015 by Refsnes Data. All Rights Reserved.</p>", 
-				$date1);
+		$sql = "SELECT * FROM Xclam";
+		$result = DataManager::ExercuseQuery($sql);
 		
-		$date2 = mktime(10, 32, 0, 8, 26, 2015);		
-		$xclam2 = new Xclam(2, 
-				"<p>[NEW] Used together with the direction property to set or return whether the text should be overridden to support multiple languages in the same document</p>", 
-				$date2);
+		$xclams = array();
+		$i = 0;
+		while($row = mysql_fetch_array($result))
+		{
+			$id = $row["Id"];
+			$content = $row["Content"];
+			$dateTime = $row["DateTime"];
+			
+			$xclams[$i++] = new Xclam($id, $content, $dateTime);
+		}
 		
-		$date3 = mktime(14, 8, 0, 8, 26, 2015);		
-		$xclam3 = new Xclam(3, 
-				"<p>[NEW] Increases or decreases the space between words in a text</p>", 
-				$date3);
-		
-		return array($xclam1, $xclam2, $xclam3);
+		return $xclams;
 	}
 	
 	static function GetXclamById($id)
@@ -39,7 +37,7 @@ class XclamManager
 	
 	static function PostXclam($content)
 	{
-		$content = str_replace("'", "\'", $content);
+		$content = self::ProcessContent($content);		
 		$dateTime = mktime(date("H"), date("i"), date("s"), date("m"), date("d"), date("Y"));
 		
 		$sql = "INSERT INTO Xclam (Content, DateTime) VALUES ('$content', $dateTime)";
@@ -54,6 +52,15 @@ class XclamManager
 	static function DeleteXclam($id)
 	{
 		
+	}
+	
+	static function ProcessContent($content)
+	{
+		$content = str_replace("'", "\'", $content);
+		$content = str_replace("\n", "<br/>", $content);
+		$content = "<p>$content</p>";
+		
+		return $content;
 	}
 	
 	static function CreateTable()
