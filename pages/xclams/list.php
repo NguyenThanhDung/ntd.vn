@@ -61,7 +61,10 @@ for($i =0; $i < $xclams_count; $i++)
 			
 			if($loggedUser && $loggedUser->GetType() == UserType::ADMIN)
 			{
-				echo '<div class="edit_delete"><p>Edit<br/>Delete</p></div>';
+				echo '<div class="edit_delete">';
+				echo '	<p><a href="xclams.php?action='.ACTION_EDIT_XCLAM_FORM.'&id='.$xclams[$i]->GetId().'">Edit</a><br/>';
+				echo '	<a href="xclams.php?action='.ACTION_DELETE_XCLAM.'&id='.$xclams[$i]->GetId().'">Delete</a></p>';
+				echo '</div>';
 			}
 			else
 			{

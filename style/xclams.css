@@ -7,6 +7,11 @@ p, a
 	color: #ccc;
 }
 
+a:HOVER
+{
+	text-decoration: underline;
+}
+
 #logo
 {
 	position: absolute;
@@ -93,9 +98,15 @@ body
 	//border: 1px solid red;
 }
 
-.edit_delete p
+.edit_delete a
 {
 	color: #999;
+	text-decoration: none;
+}
+
+.edit_delete a:HOVER
+{
+	text-decoration: underline;
 }
 
 .comments,.comment_form,.comment_link
