@@ -22,7 +22,7 @@ for($i =0; $i < $xclams_count; $i++)
 <body>
 
 	<div id="logo">
-		<img alt="Logo" src="images/logo.png">
+		<a href="index.php"><img alt="Logo" src="images/logo.png"></a>
 	</div>
 	
 	<div id="account">
