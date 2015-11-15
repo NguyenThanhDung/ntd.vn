@@ -25,7 +25,7 @@
 	<script type="text/javascript">
 	setTimeout(function () {
 	   window.location.href="<?php echo $source; ?>.php";
-	},5000);
+	},1000);
 	</script>
 	
 </body>
