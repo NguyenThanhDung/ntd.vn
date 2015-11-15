@@ -96,8 +96,10 @@ if($loggedUser)
 			break;
 			
 		case ACTION_DELETE_COMMENT:
-			$id = $_GET["id"];
-			CommentManager::DeleteComment($id);
+			if(isset($_GET["id"]))
+			{
+				CommentManager::DeleteComment($_GET["id"]);
+			}
 			break;
 			
 		default:

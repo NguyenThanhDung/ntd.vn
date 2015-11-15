@@ -57,7 +57,8 @@ class CommentManager
 	
 	static function DeleteComment($id)
 	{
-		
+		$sql = "DELETE FROM Comment WHERE Id=$id";
+		return DataManager::ExercuseQuery($sql);
 	}
 	
 	static function CreateTable()

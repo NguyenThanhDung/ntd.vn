@@ -82,7 +82,7 @@ for($i =0; $i < $xclams_count; $i++)
 				
 				if($loggedUser && $comments[$i][$j]->GetUser()->GetEmail() == $loggedUser->GetEmail())
 				{
-					echo ' - <a href="#">Delete</a>';
+					echo ' - <a href="xclams.php?action='.ACTION_DELETE_COMMENT.'&id='.$comments[$i][$j]->GetId().'">Delete</a>';
 				}
 				
 				echo '</p>';				
