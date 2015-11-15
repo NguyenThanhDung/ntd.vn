@@ -78,7 +78,14 @@ for($i =0; $i < $xclams_count; $i++)
 			{
 				echo '<p>'.$comments[$i][$j]->GetFormatedTime().', '.$comments[$i][$j]->GetFormatedDate().' - ';
 				echo '<span class="user">'.$comments[$i][$j]->GetUser()->GetDisplayName().'</span>: ';
-				echo $comments[$i][$j]->GetContent().'</p>';
+				echo $comments[$i][$j]->GetContent();
+				
+				if($loggedUser && $comments[$i][$j]->GetUser()->GetEmail() == $loggedUser->GetEmail())
+				{
+					echo ' - <a href="#">Delete</a>';
+				}
+				
+				echo '</p>';				
 			}
 			echo '	</div>';
 			

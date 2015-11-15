@@ -138,6 +138,11 @@ body
 	font-weight: bold;
 }
 
+.comments a
+{
+	color: #999;
+}
+
 .comment_form
 {
 	margin: 10px 0px 0px 40px;
