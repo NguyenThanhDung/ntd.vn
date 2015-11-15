@@ -11,22 +11,24 @@ class CommentManager
 {
 	static function GetComments($entryType, $entryId)
 	{
-		if($entryType == EntryType::XCLAM && $entryId == 1)
+		$sql = "SELECT * FROM Comment WHERE EntryType=$entryType AND EntryId=$entryId";
+		$result = DataManager::ExercuseQuery($sql);
+		
+		$comments = array();
+		$i = 0;
+		while($row = mysql_fetch_array($result))
 		{
-			$date1 = mktime(8, 35, 0, 8, 26, 2015);
-			$user1 = new User("lai@email.com", "123", "Lai", "", UserType::GUEST);
-			$comment1 = new Comment(1, $user1, "This is Lai's comment", $date1, $entryType, $entryId);
+			$id = $row["Id"];
+			$user = UserManager::GetUserByEmail($row["Email"]);
+			$content = $row["Content"];
+			$dateTime = $row["DateTime"];
+			$entryType = $row["EntryType"];
+			$entryId = $row["EntryId"];
 			
-			$date2 = mktime(8, 39, 0, 8, 26, 2015);
-			$user2 = new User("dung@email.com", "123", "Dung", "", UserType::ADMIN);
-			$comment2 = new Comment(2, $user2, "This is Dung's comment", $date2, $entryType, $entryId);
-			
-			return array($comment1, $comment2);
+			$comments[$i++] = new Comment($id, $user, $content, $dateTime, $entryType, $entryId);
 		}
-		else
-		{
-			return false;
-		}
+		
+		return $comments;
 	}
 	
 	static function GetCommentById($id)
