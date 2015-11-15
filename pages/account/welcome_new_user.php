@@ -6,6 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Nguyễn Thành Dũng's Website - Welcome</title>
 	<link rel="stylesheet" type="text/css" href="style/account.css">
+	<link rel="shortcut icon" href="images/icon.png">
 </head>
 
 <body>

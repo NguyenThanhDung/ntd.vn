@@ -12,6 +12,7 @@ date_default_timezone_set("Asia/Saigon");
 	<title>Nguyễn Thành Dũng's Website</title>
 	<link rel="stylesheet" type="text/css" href="style/common.css">
 	<link rel="stylesheet" type="text/css" href="style/index.css">
+	<link rel="shortcut icon" href="images/icon.png">
 </head>
 
 <body id="index_page">

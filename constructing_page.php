@@ -5,6 +5,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Nguyễn Thành Dũng's Website - Constructing Page</title>
+	<link rel="shortcut icon" href="images/icon.png">
 </head>
 
 <body style="background: #333;">
