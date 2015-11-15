@@ -39,7 +39,13 @@ class CommentManager
 	
 	static function PostComment($user, $content, $entryType, $entryId)
 	{
+		$email = $user->GetEmail();
+		$content = str_replace("'", "\'", $content);
+		$dateTime = mktime(date("H"), date("i"), date("s"), date("m"), date("d"), date("Y"));
 		
+		$sql = "INSERT INTO Comment (Email,Content,DateTime,EntryType,EntryId)
+				VALUES ('$email', '$content', $dateTime, $entryType, $entryId)";
+		return DataManager::ExercuseQuery($sql);
 	}
 	
 	static function UpdateComment($id, $user, $content, $entryType, $entryId)

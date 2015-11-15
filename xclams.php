@@ -74,9 +74,12 @@ if($loggedUser)
 			break;
 			
 		case ACTION_POST_COMMENT:
-			$content = $_POST["content"];
-			$entryId = $_POST["entry_id"];
-			CommentManager::PostComment($loggedUser, $content, EntryType::XCLAM, $entryId);			
+			$content = isset($_POST["content"]) ? $_POST["content"] : false;
+			$entryId = isset($_POST["entry_id"]) ? $_POST["entry_id"] : false;
+			if($content && $entryId)
+			{
+				CommentManager::PostComment($loggedUser, $content, EntryType::XCLAM, $entryId);
+			}
 			break;
 			
 		case ACTION_EDIT_COMMENT_FORM:

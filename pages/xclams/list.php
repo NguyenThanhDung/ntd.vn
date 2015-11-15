@@ -85,9 +85,9 @@ for($i =0; $i < $xclams_count; $i++)
 			if($loggedUser)
 			{
 				echo '<div class="comment_form">';
-				echo '	<form>';
+				echo '	<form action="xclams.php?action='.ACTION_POST_COMMENT.'" method="post">';
 				echo '		<input type="text" name="content" value="Write a comment...">';
-				echo '		<input type="hidden" name="entry_id" value="'.EntryType::XCLAM.'">';
+				echo '		<input type="hidden" name="entry_id" value="'.$xclams[$i]->GetId().'">';
 				echo '		<input type="submit" value="Send">';
 				echo '	</form>';
 				echo '</div>';
