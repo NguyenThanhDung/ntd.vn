@@ -1,0 +1,128 @@
+@CHARSET "ISO-8859-1";
+
+body
+{
+	background: #000 url("../images/background.png") repeat-x;
+}
+
+#quotation
+{
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	text-align: right;
+	font-style: italic;
+}
+
+#content
+{
+	margin: 250px auto 0px;
+	width: 1000px;
+	position: relative;
+}
+
+#profile
+{
+	text-align: right;
+	position: absolute;
+	top: 45px;
+	left: 0px;
+}
+
+#name
+{
+	font-weight: bold;
+	font-size: 1em;
+}
+
+#avatar
+{
+	position: absolute;
+	top: 36px;
+	left: 183px;
+}
+
+#line
+{
+	position: absolute;
+	top: 0px;
+	left: 345px;
+}	
+
+#navigation_zone
+{
+	position: absolute;
+	top: 37px;
+	left: 365px;	
+}
+
+.navigator
+{
+	display: inline-block;
+	margin: 8px;
+}
+
+.link
+{
+	display: block;
+	width: 120px;
+	height: 126px;
+}
+
+.link div
+{
+	width: 100%;
+	height: 100%;
+}
+
+#programming
+{
+	background: url("../images/programming.png");
+}
+
+#programming:HOVER
+{
+	background: url("../images/programming_hover.png");
+}
+
+#guitar
+{
+	background: url("../images/guitar.png");
+}
+
+#guitar:HOVER
+{
+	background: url("../images/guitar_hover.png");
+}
+
+#photography
+{
+	background: url("../images/photography.png");
+}
+
+#photography:HOVER
+{
+	background: url("../images/photography_hover.png");
+}
+
+#xclams
+{
+	background: url("../images/xclams.png");
+}
+
+#xclams:HOVER
+{
+	background: url("../images/xclams_hover.png");
+}
+
+.name p
+{
+	margin: 10px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.highlight
+{
+	visibility: hidden;
+}

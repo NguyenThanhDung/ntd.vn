@@ -1,0 +1,159 @@
+@CHARSET "ISO-8859-1";
+
+p
+{
+	font-family: Tahoma, Arial, Sans-serif;
+	font-size: 0.9em;
+	color: #ccc;
+}
+
+a
+{
+	font-family: Tahoma, Arial, Sans-serif;
+	font-size: 0.9em;
+}
+
+a:HOVER
+{
+	text-decoration: underline;
+}
+
+#logo
+{
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+#copyright
+{
+	position: absolute;
+	right: 20px;
+	bottom: 0px;
+	color: #777;
+}
+
+body
+{
+	background: #333;
+}
+
+#account
+{
+	position: absolute;
+	top: -5px;
+	right: 10px;
+}
+
+#account a
+{
+	color: #ccc;
+}
+
+.wrap
+{
+	padding: 100px 0px 0px;
+}
+
+.enter_xclam
+{
+	width: 1024px;
+	margin: auto;
+	text-align: center;
+}
+
+.enter_xclam textarea
+{
+	vertical-align: middle;	
+}
+
+.entry
+{
+	width: 1024px;
+	margin: auto;
+	clear: both;
+	
+	//border: 1px solid green;
+}
+
+.datetime
+{
+	float: left;
+	width: 130px;
+	margin: 10px 0px 0px;
+	text-align: right;
+	
+	//border: 1px solid blue;	
+}
+
+.content
+{
+	float: right;
+	width: 805px;
+	min-height: 60px;
+	margin: 10px 0px 0px;
+	padding: 0px 10px 0px;
+	background: #555;
+	border-radius: 10px;
+	
+	//border: 1px solid #ff0;
+}
+
+.edit_delete
+{
+	float: right;
+	width: 50px;
+	margin: 5px 0px 0px;
+	padding: 0px 5px 0px;
+	
+	//border: 1px solid red;
+}
+
+.edit_delete a
+{
+	color: #999;
+	text-decoration: none;
+}
+
+.edit_delete a:HOVER
+{
+	text-decoration: underline;
+}
+
+.comments,.comment_form,.comment_link
+{
+	float: right;
+	width: 825px;
+	
+	//border: 1px solid #0ff;
+}
+
+.comments
+{
+	margin: 0px 0px 0px 40px;	
+}
+
+.comments .user
+{
+	font-weight: bold;
+}
+
+.comments a
+{
+	color: #999;
+}
+
+.comment_form
+{
+	margin: 10px 0px 0px 40px;
+}
+
+.comment_link
+{
+	margin: 10px 0px 0px 40px;
+}
+
+.comment_link a
+{
+	color: #999;
+}
