@@ -19,7 +19,6 @@ const ACTION_SUBMIT_EDITED_COMMENT	= 7;
 const ACTION_DELETE_COMMENT			= 8;
 
 session_start();
-date_default_timezone_set("Asia/Saigon");
 
 $loggedUser = isset($_SESSION["loggedUser"]) ? $_SESSION["loggedUser"] : false;
 

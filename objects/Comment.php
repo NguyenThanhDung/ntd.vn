@@ -40,12 +40,12 @@ class Comment
 	
 	function GetFormatedTime()
 	{
-		return date("h:i A", $this->dateTime);
+		return date("h:i A", $this->dateTime + Config::TIMEZONE_OFFSET);
 	}
 	
 	function GetFormatedDate()
 	{
-		return date("M dS", $this->dateTime);
+		return date("M dS", $this->dateTime + Config::TIMEZONE_OFFSET);
 	}
 	
 	function GetEntryType()
