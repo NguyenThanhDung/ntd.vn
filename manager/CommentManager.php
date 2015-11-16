@@ -61,6 +61,12 @@ class CommentManager
 		return DataManager::ExercuseQuery($sql);
 	}
 	
+	static function DeleteComments($entryType, $entryId)
+	{
+		$sql = "DELETE FROM Comment WHERE EntryType=$entryType AND EntryId=$entryId";		
+		return DataManager::ExercuseQuery($sql);
+	}
+	
 	static function CreateTable()
 	{
 		$sql = "CREATE TABLE Comment(

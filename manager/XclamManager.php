@@ -60,6 +60,8 @@ class XclamManager
 	
 	static function DeleteXclam($id)
 	{
+		CommentManager::DeleteComments(EntryType::XCLAM, $id);
+		
 		$sql = "DELETE FROM Xclam WHERE Id=$id";
 		return DataManager::ExercuseQuery($sql);
 	}

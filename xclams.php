@@ -1,4 +1,8 @@
 <?php
+// XCLAMS
+// Arthor: Nguyen Thanh Dung
+// Version: 1.0.1
+
 include "config.php";
 include "objects/User.php";
 include "objects/Xclam.php";
