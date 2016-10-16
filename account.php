@@ -5,6 +5,7 @@ include "database/DataManager.php";
 include "manager/UserManager.php";
 include "objects/User.php";
 
+date_default_timezone_set(Config::TIMEZONE);
 session_start();
 
 $action = $_GET["action"];

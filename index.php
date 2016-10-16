@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set(Config::TIMEZONE);
 session_start();
 ?>
 

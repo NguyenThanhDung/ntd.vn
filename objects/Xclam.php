@@ -35,12 +35,12 @@ class Xclam
 	
 	function GetFormatedTime()
 	{
-		return date("h:i A, D", $this->dateTime + Config::TIMEZONE_OFFSET);
+		return date("h:i A, D", $this->dateTime);
 	}
 	
 	function GetFormatedDate()
 	{
-		return date("M dS, Y", $this->dateTime + Config::TIMEZONE_OFFSET);
+		return date("M dS, Y", $this->dateTime);
 	}
 }
 ?>

@@ -3,6 +3,13 @@
 // Arthor: Nguyen Thanh Dung
 // Version: 1.0.1
 
+// TODO:
+// - Confirm with user before delete xclam or comment
+// - Hide the suggestion text in the text input when user click on it 
+// - Display Xclams by page number
+// - Adjust user inteface for mobile device
+// - Validate the user email address
+
 include "config.php";
 include "objects/User.php";
 include "objects/Xclam.php";
@@ -22,6 +29,7 @@ const ACTION_EDIT_COMMENT_FORM		= 6;
 const ACTION_SUBMIT_EDITED_COMMENT	= 7;
 const ACTION_DELETE_COMMENT			= 8;
 
+date_default_timezone_set(Config::TIMEZONE);
 session_start();
 
 $loggedUser = isset($_SESSION["loggedUser"]) ? $_SESSION["loggedUser"] : false;
