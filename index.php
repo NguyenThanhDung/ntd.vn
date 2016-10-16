@@ -1,4 +1,6 @@
 <?php
+include "config.php";
+
 date_default_timezone_set(Config::TIMEZONE);
 session_start();
 ?>
@@ -29,7 +31,7 @@ session_start();
 	
 			<div id="profile">
 				<p id="name">Nguyễn Thành Dũng</p>
-				<p id="info">Game Programmer<br/>27 years old<br/>Sai Gon, Viet Nam</p>
+				<p id="info">Mobile Game Programmer<br/><?php echo (date("Y")-1988); ?> years old<br/>Sai Gon, Viet Nam</p>
 			</div>
 		
 			<div id="avatar">
@@ -90,7 +92,7 @@ session_start();
 	</div>
 	
 	<div id="copyright">
-		<p>© 2015 Nguyễn Thành Dũng</p> 
+		<p>© 2015-<?php echo date("Y"); ?> Nguyễn Thành Dũng</p> 
 	</div>
 
 </body>
